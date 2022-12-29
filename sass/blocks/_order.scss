@@ -1,0 +1,122 @@
+@use "../utils/variables";
+
+.order {
+  margin-top: -138px;
+  margin-bottom: 100px;
+
+  &__filter {
+    display: flex;
+    align-items: center;
+    max-width: 520px;
+    border-radius: 0px 20px 20px 20px;
+    color: #030522;
+
+    &__btn {
+      width: 173px;
+      padding: 16px 20px;
+      background-color: #ffffff;
+      text-align: center;
+      border: none;
+      border-bottom: 1px solid #f3f4f6;
+      font-weight: 600;
+      font-size: 18px;
+      line-height: 28px;
+      cursor: pointer;
+    }
+
+    &__btn:nth-child(1) {
+      border-radius: 20px 0 0 0;
+    }
+
+    &__btn:nth-child(2) {
+      position: relative;
+    }
+
+    &__btn:nth-child(2)::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      right: -16px;
+      width: 32px;
+      height: 1px;
+      background-color: #e5e7eb;
+      transform: rotate(90deg);
+    }
+
+    &__btn:nth-child(3) {
+      border-radius: 0 30px 0 0;
+    }
+
+    &__btn--active {
+      background-color: #313ef7;
+      border-color: #313ef7;
+      color: #ffffff;
+    }
+  }
+
+  &__content {
+    padding: 40px;
+    border-radius: 0px 20px 20px 20px;
+    @include box-shadow;
+  }
+
+  &__list {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  &__item::before {
+    content: "";
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background: {
+      image: url("../../img/date.svg");
+      size: auto;
+      position: center;
+      repeat: no-repeat;
+      color: rgba(49, 62, 247, 0.05);
+    }
+  }
+
+  &__item:nth-child(1)::before {
+    background-image: url("../../img/location.svg");
+  }
+
+  &__item:nth-child(2)::before {
+    background-image: url("../../img/order-users.svg");
+  }
+
+  &__heading {
+    margin: 0;
+    @include font(600, 18px, 27px, #030522);
+  }
+
+  &__text {
+    margin: 0;
+    @include font(400, 16px, 28px, #aeb5bf);
+  }
+
+  &__btn {
+    display: block;
+    max-width: 200px;
+    margin: 24px auto 0;
+    padding: 14px 45px;
+    background-color: #313ef7;
+    border: none;
+    box-shadow: 0px 10px 14px rgba(49, 62, 247, 0.25);
+    border-radius: 56px;
+    text-align: center;
+    @include font(600, 16px, 28px, #ffffff);
+  }
+}

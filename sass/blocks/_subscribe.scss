@@ -1,0 +1,53 @@
+@use "../utils/variables";
+
+.subscribe {
+  background-color: rgba(49, 62, 247, 0.05);
+
+  &-wrapper {
+    max-width: 534px;
+    padding-top: 100px;
+    padding-bottom: 76px;
+    margin: 0 auto;
+  }
+
+  &__heading {
+    margin: 0 0 40px;
+    @include font(700, 40px, 60px, #011736);
+    text-align: center;
+    letter-spacing: 0.015em;
+    text-transform: capitalize;
+  }
+
+  &__form {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 493px;
+    margin: 0 auto;
+    padding: 11px 11px 11px 20px;
+    @include box-shadow;
+    border-radius: 150px;
+  }
+
+  &__email {
+    outline: none;
+    border: none;
+    width: 67%;
+    background-color: transparent;
+    @include font(400, 17px, 24px, #101131);
+    opacity: 0.9;
+    &::placeholder {
+      color: #aeb5bf;
+    }
+  }
+
+  &__btn {
+    margin: 0;
+    padding: 10px 25px;
+    background-color: $blue;
+    border: none;
+    border-radius: 56px;
+    @include font(600, 16px, 28px, #ffffff);
+    cursor: pointer;
+  }
+}

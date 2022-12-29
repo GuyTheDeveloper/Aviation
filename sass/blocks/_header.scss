@@ -1,0 +1,50 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-block: 20px;
+  background-color: transparent;
+
+  &__nav {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+
+    &__link,
+    &__btn {
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 28px;
+      color: #ffffff;
+      text-transform: capitalize;
+    }
+
+    &__link {
+      padding-block: 10px;
+    }
+
+    &__link::after {
+      content: "";
+      display: none;
+      width: 100%;
+      height: 1px;
+      background-color: #313ef7;
+    }
+
+    &__link--active {
+      color: #313ef7;
+    }
+
+    &__link--active::after {
+      display: block;
+    }
+
+    &__btn {
+      padding: 10px 40px;
+      background-color: transparent;
+      border: 1px solid #ffffff;
+      border-radius: 59px;
+      cursor: pointer;
+    }
+  }
+}

@@ -1,0 +1,24 @@
+@use "../utils/variables";
+
+.aside {
+  margin-bottom: 100px;
+
+  &__heading {
+    margin: 0 0 40px;
+    @include font(700, 40px, 60px, #011736);
+    text-align: center;
+    letter-spacing: 0.015em;
+    text-transform: capitalize;
+  }
+
+  &__content {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+
+    & > img:nth-of-type(even) {
+      align-self: flex-end;
+      margin-top: 50px;
+    }
+  }
+}

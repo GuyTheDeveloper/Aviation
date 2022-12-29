@@ -1,0 +1,43 @@
+@use "../utils/variables";
+
+.hero {
+  background-image: radial-gradient(
+    50% 50% at 50% 50%,
+    rgba(18, 20, 78, 0.9) 0%,
+    #010223 100%
+  );
+  padding-bottom: 189px;
+
+  &__inner {
+    padding-top: 40px;
+    background: {
+      image: url("../../img/map.png");
+      size: auto;
+      position: top;
+      repeat: no-repeat;
+      color: transparent;
+    }
+  }
+
+  &__heading {
+    margin: 0;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 72px;
+    text-align: center;
+    letter-spacing: 0.015em;
+    text-transform: capitalize;
+    color: #ffffff;
+  }
+
+  &__text {
+    margin: 0;
+    margin-top: 8px;
+    font-family: "Inter";
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 15px;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.7);
+  }
+}

@@ -1,0 +1,98 @@
+@use "../utils/variables";
+
+.customers {
+  margin-bottom: 100px;
+
+  &__heading-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 60px;
+  }
+
+  &__heading {
+    order: -1;
+    margin: 0;
+    @include font(600, 20px, 24px, $blue);
+  }
+
+  &__title {
+    margin: 8px 0 0;
+    @include font(700, 40px, 60px, #011736);
+    letter-spacing: 0.015em;
+    text-transform: capitalize;
+  }
+
+  &-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 21px;
+  }
+
+  &__right > blockquote {
+    margin: 0;
+    padding: 30px 21px;
+    background-color: #ffffff;
+    @include box-shadow;
+    border-radius: 20px;
+  }
+
+  &__top {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+
+    &__user {
+      margin: 0 0 8px;
+      font-style: normal;
+      @include font(600, 20px, 24px, #011736);
+      text-transform: capitalize;
+      opacity: 0.9;
+    }
+
+    &-wrapper {
+      display: flex;
+      align-items: center;
+      gap: 9px;
+    }
+
+    &__star {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0;
+      padding: 0;
+      border: none;
+      background-color: transparent;
+      color: #ff9900;
+    }
+  }
+
+  &__text {
+    margin: 16px 0 0;
+    font-style: italic;
+    @include font(500, 18px, 34px, #1b1b1c);
+  }
+
+  &__btns {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    margin-top: 32px;
+  }
+
+  &__prev,
+  &__next {
+    width: 50px;
+    height: 50px;
+    background-position: center;
+    background-size: 10px 20px;
+  }
+
+  &__prev {
+    background-image: url("../../img/customers-prev.svg");
+    background-color: rgba(49, 62, 247, 0.1);
+  }
+}

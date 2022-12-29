@@ -1,0 +1,95 @@
+@use "../utils/variables";
+
+.features {
+  margin-bottom: 100px;
+
+  &__heading {
+    margin: 0 0 40px;
+    @include font(700, 40px, 60px, #030522);
+    text-align: center;
+    letter-spacing: 0.015em;
+    text-transform: capitalize;
+  }
+
+  &__list {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    min-height: 410px;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+  }
+
+  &__item {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 282px;
+    padding: 42px 21px;
+    background-color: $white;
+    @include box-shadow;
+    border-radius: 185px;
+
+    &__heading {
+      margin: 72px 0 10px;
+      text-align: center;
+      text-transform: capitalize;
+      @include font(800, 24px, 36px, #030522);
+    }
+
+    &:nth-of-type(even) {
+      align-self: flex-start;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 28px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 70px;
+      height: 70px;
+      background: {
+        size: auto;
+        position: center;
+        repeat: no-repeat;
+        color: rgba(49, 62, 247, 0.05);
+      }
+      border-radius: 50%;
+    }
+
+    &:nth-child(1)::before {
+      background-image: url("../../img/travel.svg");
+    }
+
+    &:nth-child(2)::before {
+      background-image: url("../../img/discount.svg");
+    }
+
+    &:nth-child(4)::before {
+      background-image: url("../../img/support.svg");
+    }
+  }
+
+  &__text {
+    margin: 0 0 32px;
+    text-align: center;
+    @include font(400, 16px, 24px, rgba(3, 5, 34, 0.65));
+  }
+
+  &__link {
+    position: relative;
+    width: 50px;
+    height: 50px;
+    background: {
+      image: url("../../img/arrow-white.svg");
+      size: auto;
+      position: center;
+      repeat: no-repeat;
+      color: #030522;
+    }
+    border-radius: 50%;
+  }
+}

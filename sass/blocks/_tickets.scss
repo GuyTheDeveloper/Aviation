@@ -1,0 +1,212 @@
+@use "../utils/variables";
+
+.tickets {
+  background-color: $dark-blue;
+  margin-bottom: 100px;
+
+  &-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-block: 50px;
+  }
+
+  &__left {
+    max-width: 496px;
+
+    &__heading {
+      margin: 0;
+      @include font(700, 40px, 60px, #ffffff);
+      letter-spacing: 0.015em;
+      text-transform: capitalize;
+    }
+
+    &__text {
+      margin: 16px 0 24px;
+      @include font(400, 16px, 24px, rgba(255, 255, 255, 0.65));
+    }
+  }
+
+  &__right {
+    display: flex;
+    align-items: center;
+    gap: 84px;
+    padding-bottom: 60px;
+  }
+
+  &__card {
+    width: max(390px, 390px, 280px);
+    background-color: #ffffff;
+    box-shadow: rgb(255 255 255 / 5%) 21px 20px, rgb(255 255 255 / 5%) 44px 39px,
+      rgb(255 255 255 / 5%) 67px 58px;
+    border-radius: 30px;
+    overflow: hidden;
+
+    &-wrapper {
+      padding: 30px 30px 0;
+    }
+
+    &__top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    &__type {
+      margin: 0;
+      padding: 8px 10px;
+      background-color: rgba(49, 62, 247, 0.1);
+      border-radius: 49px;
+      text-transform: capitalize;
+      @include font(500, 16px, 20px, $blue);
+    }
+
+    &__country {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      @include font(600, 16px, 20px, #030522);
+    }
+
+    &__count {
+      margin: 24px 0 24px;
+      text-transform: capitalize;
+      @include font(700, 16px, 24px, #030522);
+    }
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px 16px;
+    margin: 0 0 38px;
+    padding: 0;
+    list-style-type: none;
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+
+    &__heading {
+      margin: 5px 0 0;
+      @include font(600, 16px, 24px, #030522);
+    }
+
+    &__info {
+      @include font(500, 14px, 21px, #9ca3af);
+    }
+  }
+
+  &__line {
+    position: relative;
+    display: block;
+    width: 100%;
+    margin-bottom: 47px;
+    border-bottom: 1px dashed #868d96;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      right: -15px;
+      transform: translateY(-50%);
+      display: block;
+      width: 34px;
+      height: 34px;
+      border-radius: 50%;
+      background-color: $dark-blue;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: -17px;
+      transform: translateY(-50%);
+      display: block;
+      width: 34px;
+      height: 34px;
+      background-color: $dark-blue;
+      border-radius: 50%;
+    }
+  }
+
+  &__code-wrapper {
+    padding-inline: 17px;
+    padding-bottom: 30px;
+  }
+
+  &__slider {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-inline: 15px;
+    background-color: transparent;
+
+    &__inner {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      padding-top: 60px;
+    }
+
+    &__count {
+      width: 10px;
+      height: 10px;
+      margin: 0;
+      padding: 0;
+      border: none;
+      border-radius: 50%;
+      background: red;
+      background-color: rgba(255, 255, 255, 0.1);
+      cursor: pointer;
+    }
+
+    &__count--active {
+      background-color: #ffffff;
+    }
+
+    &__dots {
+      height: 151px;
+      margin: 52px 0 51px;
+      border-left: 2px dashed rgba(255, 255, 255, 0.2);
+    }
+
+    &__btns {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 11px;
+    }
+  }
+
+  &__prev,
+  &__next {
+    width: 40px;
+    height: 40px;
+    border: none;
+    padding: 0;
+    margin: 0;
+    border-radius: 56px;
+    background: {
+      image: url("../../img/tickets-arrow.svg");
+      size: auto;
+      position: center;
+      repeat: no-repeat;
+      color: rgba(255, 255, 255, 0.1);
+    }
+    cursor: pointer;
+  }
+
+  &__next {
+    background: {
+      image: url("../../img/tickets-next.svg");
+      size: auto;
+      position: 17px 11px;
+      repeat: no-repeat;
+      color: $blue;
+    }
+    box-shadow: 0px 10px 14px rgba(49, 62, 247, 0.25);
+  }
+}

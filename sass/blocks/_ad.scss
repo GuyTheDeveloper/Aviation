@@ -1,0 +1,94 @@
+@use "../utils/variables";
+
+.ad {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 100px;
+
+  &__left {
+    position: relative;
+  }
+
+  &__country,
+  &__rate {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 5px 15px 5px 5px;
+    background-color: #ffffff;
+    box-shadow: 0px 20px 20px rgba(122, 89, 255, 0.08);
+    border-radius: 69px;
+    @include font(600, 16px, 14px, #000000);
+  }
+
+  &__country {
+    left: 64px;
+    bottom: 42px;
+  }
+
+  &__rate {
+    top: 119px;
+    right: 36px;
+  }
+
+  &__right {
+    display: flex;
+    flex-direction: column;
+    max-width: 588px;
+  }
+
+  &__heading {
+    margin: 16px 0 40px;
+    @include font(700, 32px, 45px, #030303);
+  }
+
+  &__heading2 {
+    position: relative;
+    order: -1;
+    margin: 0;
+    @include font(900, 20px, 24px, $blue);
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 10px;
+      right: 0;
+      display: inline-block;
+      width: 483px;
+      border-bottom: 2px dashed #e5e7eb;
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    gap: 10px;
+  }
+
+  &__item {
+    position: relative;
+    padding-left: 20px;
+    @include font(500, 16px, 28px, #030303);
+  }
+
+  &__item::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 8px;
+    display: block;
+    width: 10px;
+    height: 10px;
+    background-color: $blue;
+    border-radius: 50%;
+  }
+
+  &__btn {
+    margin: 40px 0 0;
+  }
+}
